@@ -1,5 +1,6 @@
 import csv
 import json
+import os
 import re
 import requests
 from time import sleep
@@ -14,7 +15,6 @@ isins = [
     "HU0000702022",
     "HU0000714555",
     "HU0000706361",
-    
 ]
 
 for isin in isins:
@@ -42,8 +42,12 @@ for isin in isins:
     except:
         pass
 
+    target_dir = "isin-data-bamosz"
+    if not os.path.exists(target_dir):
+        os.makedirs(target_dir)
+
     if len(quotes) > 0:
-        with open(f"{isin}.json", "w") as json_file:
+        with open(f"{target_dir}/{isin}.json", "w") as json_file:
             json_file.write(json.dumps({"isin": isin, "data": quotes}))
 
     sleep(0.5)
