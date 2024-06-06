@@ -1,4 +1,4 @@
-name: Update json files
+name: Update JSON files
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     branches:
       - main
   schedule:
-    - cron:  '0 14 * * *'
+    - cron:  '0 08 * * *'
 
 permissions:
   contents: write
@@ -36,5 +36,5 @@ jobs:
           git config user.name ${{ secrets.USERNAME }}
           git config user.email ${{ secrets.EMAIL }}
           git add .
-          git commit -m "Update json files"
+          git commit -m "Update JSON files"
           git push
