@@ -9,3 +9,4 @@ This github repo supports the following Bamosz ISIN:
 - HU0000713821
 - HU0000713839
 - HU0000713847
+- HU0000714464 (MPT "I")
