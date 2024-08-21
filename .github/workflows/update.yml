@@ -6,7 +6,7 @@ on:
     branches:
       - main
   schedule:
-    - cron:  '0 08 * * *'
+    - cron:  '0 08 * * 1-5'
 
 permissions:
   contents: write
